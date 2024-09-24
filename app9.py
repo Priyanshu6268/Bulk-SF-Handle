@@ -10,7 +10,7 @@ def send_email(subject, body, cc_addresses, smtp_server, smtp_port, sender_email
     try:
         msg = MIMEMultipart()
         msg['From'] = sender_email
-        msg['To'] = 'priyanshukumar7470@gmail.com'
+        msg['To'] = 'support.services@nokia.com'
         msg['Subject'] = subject
         msg['Cc'] = ', '.join(cc_addresses)
 
