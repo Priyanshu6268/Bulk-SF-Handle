@@ -22,7 +22,7 @@ def send_email(subject, body, cc_addresses, smtp_server, smtp_port, sender_email
             text = msg.as_string()
             server.sendmail(sender_email, [msg['To']] + cc_addresses, text)
 
-        return f"Email sent to {msg['To']} with CC to {', '.join(cc_addresses)} and subject '{subject}'"
+        return f"Email sent to {msg['To']} with CC to {', '.join(cc_addresses)}"
     except Exception as e:
         return f"Failed to send email: {str(e)}"
 
