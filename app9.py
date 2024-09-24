@@ -30,9 +30,10 @@ def send_email(subject, body, cc_addresses, smtp_server, smtp_port, sender_email
 background_style = """
 <style>
 [data-testid="stAppViewContainer"] > .main {
-    background-image: url("https://cdn.neowin.com/news/images/uploaded/2023/02/1677429005_aip3aiw-zvjzcnzj.gif");
+    # background-image: url("https://www.nokia.com/sites/default/files/2023-02/nokia-refreshed-logo-1_1.jpg");
     background-size: cover;
     background-position: center;
+    background-color:#c7e4f5;
     color: #333; /* Default text color */
     padding: 20px;
     border-radius: 20px; /* Rounded corners */
@@ -40,7 +41,7 @@ background_style = """
 
 .logo {
     position: absolute;
-    top: 20px;
+    top: -20px;
     left: -200px;
     width: 150px; /* Adjust size as needed */
 }
@@ -89,12 +90,12 @@ input[type="text"]:focus, input[type="password"]:focus {
 st.markdown(background_style, unsafe_allow_html=True)
 
 # Add logo
-st.markdown('<img class="logo" src="https://www.nokia.com/sites/default/files/2023-02/nokia-refreshed-logo-1_1.jpg?height=244&width=543" alt="Nokia Logo">', unsafe_allow_html=True)
+st.markdown('<img class="logo" src="https://cdn.neowin.com/news/images/uploaded/2023/02/1677429005_aip3aiw-zvjzcnzj.gif?height=244&width=543" alt="Nokia Logo">', unsafe_allow_html=True)
 
 # Centered title
 st.markdown(
     """
-    <h1 style='text-align: center; color: white; font-family: "Algerian"; font-size: 48px;'>Bulk SF-Case Update</h1>
+    <h1 style='text-align: center; color: Blue; font-family: "Verdana"; font-size: 48px;'>Bulk SF-Case Update</h1>
     """,
     unsafe_allow_html=True
 )
@@ -105,11 +106,11 @@ smtp_port = 587
 sender_email = "priyanshukumarsaw@outlook.com"
 sender_password = 'idulybvwptgeaiax'
 
-st.markdown("<span style='font-size: 20px; font-weight: bold;'>Provide additional CC emails (comma-separated):</span>", unsafe_allow_html=True)
+st.markdown("<span style='font-size: 20px; font-weight: bold;color: #004b86;'>Provide additional CC emails (comma-separated):</span>", unsafe_allow_html=True)
 sender_cc = st.text_input("")
 
 # File uploader with increased visibility
-st.markdown('<div style="font-size: 20px; font-weight: bold; color: #004b87;">Choose an Excel file:</div>', unsafe_allow_html=True)
+st.markdown('<div style="font-size: 20px; font-weight: bold; color: #004b86;">Choose an Excel file:</div>', unsafe_allow_html=True)
 uploaded_file = st.file_uploader("", type="xlsx")
 
 if uploaded_file:
@@ -144,7 +145,7 @@ if uploaded_file:
 st.markdown(
     """
     <div class="footer">
-        <p>&copy; 2024 Nokia. All rights reserved by MN S GSD SWSS NM&SON TS Team 4.</p>
+        <p>&copy; 2024 Nokia. All rights reserved by MN S GSD SWSS NM&SON TS Team.</p>
     </div>
     """,
     unsafe_allow_html=True
