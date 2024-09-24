@@ -128,7 +128,7 @@ if uploaded_file:
             for _, row in df.iterrows():
                 owner_mail = row['OwnerEmail'].strip()
                 dt = datetime.now()
-                update = f"Updated as on {dt:%I:%M:%S %p, %B %d, %Y}{'\n'}{'\n'}{row['Update']}"
+                update = f"Updated as on {dt:%I:%M:%S %p, %B %d, %Y}\n\n{row['Update']}"
                 subject = row['Subject']
                 body = update
                 # Append owner mail to CC addresses
