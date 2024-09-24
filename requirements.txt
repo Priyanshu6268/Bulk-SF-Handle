@@ -1,0 +1,6 @@
+pandas 
+openpyxl 
+pywin32
+streamlit
+
+pywin32==303; platform_system=="Windows"
