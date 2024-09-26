@@ -67,8 +67,8 @@ input[type="text"], input[type="password"] {
     border: 2px solid #004b87; /* Border color */
     border-radius: 5px; /* Rounded corners */
     padding: 10px;
-    font-size: 16px; /* Increased font size */
-    font-weight: bold; /* Bold text */
+    font-size: 16px; 
+    font-weight: bold; 
 }
 
 input[type="text"]:focus, input[type="password"]:focus {
@@ -129,7 +129,7 @@ if uploaded_file:
                 owner_mail = row['OwnerEmail'].strip()
                 dt = datetime.now()
                 update = f"Updated as on {dt:%I:%M:%S %p, %B %d, %Y} UTC\n\n{row['Update']}"
-                subject = row['Subject']
+                subject = row['Email Subject']
                 body = update
                 # Append owner mail to CC addresses
                 cc_addresses.append(owner_mail)
